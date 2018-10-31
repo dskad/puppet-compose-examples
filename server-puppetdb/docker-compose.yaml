@@ -13,7 +13,7 @@ services:
       puppetnet:
         aliases:
           - puppet.example.com
-        postgres_db:
+      postgres_db:
     volumes:
       - puppetserver-code:/etc/puppetlabs/code
       - puppetserver-ssl:/etc/puppetlabs/puppet/ssl
@@ -203,17 +203,8 @@ networks:
   postgres_db:
     external: true
 
-# volumes:
-
-  # postgres-data:
-  # puppetdb-conf:
-  # puppetdb-cache:
-  # puppetdb-data:
-  # puppetdb-logs:
-  # puppetexplorer-conf:
-  # puppetexplorer-cache:
-  # puppetexplorer-httpd_conf:
-  # puppetboard-conf:
-  # puppetboard-cache:
-  # nats-puppet-conf:
-  # nats-puppet-cache:
+volumes:
+  puppetserver-code:
+  puppetserver-ssl:
+  pupeptserver-ssh:
+  puppetdb-ssl:
